@@ -6,3 +6,4 @@
 * Start learning TypeScript, so project gonna built with TypeScript
 * This project will include all main functionalities (search, filter,api,sorting,crud,themes,auth etc)
 * Following design pattern and decomposition
+* Creat global themes: dark,light. Which will accessable globally (useContext)

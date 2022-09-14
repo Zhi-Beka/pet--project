@@ -1,21 +1,14 @@
 import "./styles/index.scss";
 import { Link } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import { AboutPageLazy } from "./pages/aboutPage/AboutPage.lazy";
 import { MainPageLazy } from "./pages/mainPage/MainPage.lazy";
-
-export enum Theme {
-  DARK = "dark",
-  LIGHT = "light",
-}
+import { useTheme } from "./theme/useTheme";
 
 const App = () => {
-  const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
+  const { theme, toggleTheme } = useTheme();
 
-  const toggleTheme = () => {
-    setTheme(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK);
-  };
   return (
     <div className={`app ${theme}`}>
       <button onClick={toggleTheme}> change color</button>

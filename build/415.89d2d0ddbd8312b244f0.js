@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpet_project=self.webpackChunkpet_project||[]).push([[415],{415:(e,t,c)=>{c.r(t),c.d(t,{default:()=>r});var n=c(893);const r=function(){return(0,n.jsx)("div",{children:"MainPage"},void 0)}}}]);

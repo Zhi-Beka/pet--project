@@ -1,10 +1,11 @@
-import { BuildOptions } from "./types/configs";
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
+/* eslint-disable import/extensions */
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import { BuildOptions } from './types/configs';
 
 export function buildDevServer(options: BuildOptions): DevServerConfiguration {
-  return {
-    port: options.port,
-    open: true,
-    historyApiFallback: true,
-  };
+    return {
+        port: options.port,
+        open: true,
+        historyApiFallback: true,
+    };
 }

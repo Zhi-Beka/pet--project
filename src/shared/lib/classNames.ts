@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 type Modes = Record<string, boolean | string>;
 
 export function classNames(
@@ -10,7 +9,6 @@ export function classNames(
         cls,
         ...additional.filter(Boolean),
         ...Object.entries(mods)
-
             .filter(([_, value]) => Boolean(value))
             .map(([className]) => className),
     ].join(' ');

@@ -1,5 +1,5 @@
 module.exports = {
-    env: { browser: true, es2021: true },
+    env: { browser: true, es2021: true, jest: true },
     extends: [
         'plugin:react/recommended',
         'airbnb',
@@ -47,7 +47,8 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'no-unused-vars': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
-        'implicit-arrow-linebreak': ['error', 'below'],
+        'implicit-arrow-linebreak': 'off',
+        'max-len': ['error', { ignoreComments: true }],
     },
     globals: {
         __IS_DEV__: true,

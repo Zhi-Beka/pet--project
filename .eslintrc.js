@@ -32,13 +32,8 @@ module.exports = {
         'import/extensions': 'off',
         'no-shadow': 'off',
         'react/require-default-props': 'off',
-        'react/function-component-definition': [
-            'error',
-            {
-                namedComponents: ['function-declaration', 'arrow-function'],
-                unnamedComponents: 'arrow-function',
-            },
-        ],
+        'react/function-component-definition': 'off',
+        'arrow-body-style': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'comma-dangle': 'off',
         'jsx-quotes': [2, 'prefer-single'],
@@ -49,6 +44,7 @@ module.exports = {
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'implicit-arrow-linebreak': 'off',
         'max-len': ['error', { ignoreComments: true }],
+        'react/jsx-wrap-multilines': 'off',
     },
     globals: {
         __IS_DEV__: true,

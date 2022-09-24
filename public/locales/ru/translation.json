@@ -1,5 +1,6 @@
 {
-  "translate": "перевод",
-  "Hello World!": "Привет мир!",
-  "Language": "Русский"
+    "translate": "перевод",
+    "Hello World!": "Привет мир!",
+    "Language": "Русский",
+    "Page not found": "Страница не найдена"
 }

@@ -1,4 +1,7 @@
 {
-  "Language": "Language",
-  "Page not found": "Page not found"
+  "Error": "Ошибка",
+  "Language": "Язык",
+  "Page not found": "страница не найдена",
+  "Reload": "Перезагрузка",
+  "Something went wrong!": "что то рошло не так"
 }

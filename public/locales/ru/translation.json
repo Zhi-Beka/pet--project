@@ -2,5 +2,7 @@
     "translate": "перевод",
     "Hello World!": "Привет мир!",
     "Language": "Русский",
-    "Page not found": "Страница не найдена"
+    "Page not found": "Страница не найдена",
+    "Something went wrong": "Что-то пошло не так",
+    "Error": "Ошибка"
 }

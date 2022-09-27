@@ -1,0 +1,8 @@
+.pageError {
+    display: flex;
+    min-height: calc(100vh - var(--navbar-height));
+    justify-content: center;
+    font-size: var(--font-size-l);
+    align-items: center;
+    width: 100%;
+}

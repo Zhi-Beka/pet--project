@@ -1,4 +1,7 @@
 {
+  "Error": "Error",
   "Language": "Language",
-  "Page not found": "Page not found"
+  "Page not found": "Page not found",
+  "Reload": "Reload",
+  "Something went wrong!": "Something went wrong!"
 }

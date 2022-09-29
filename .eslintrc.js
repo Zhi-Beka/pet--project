@@ -34,7 +34,7 @@ module.exports = {
         'react/require-default-props': 'off',
         'react/function-component-definition': 'off',
         'arrow-body-style': 'off',
-        'react/jsx-props-no-spreading': 'warn',
+        'react/jsx-props-no-spreading': 'off',
         'comma-dangle': 'off',
         'jsx-quotes': [2, 'prefer-single'],
         'comma-spacing': ['error', { before: false, after: true }],
@@ -43,7 +43,7 @@ module.exports = {
         'no-unused-vars': 'off',
         'i18next/no-literal-string': [
             'error',
-            { markupOnly: true, ignoreAttribute: ['data-testid'] },
+            { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
         ],
         'implicit-arrow-linebreak': 'off',
         'max-len': ['error', { ignoreComments: true, code: 100 }],

@@ -1,5 +1,5 @@
 .sidebar {
-    min-height: calc(100vh - var(--navbar-height));
+    height: calc(100vh - var(--navbar-height));
     width: var(--sidebar-width);
     background: var(--inverted-bg-color);
     position: relative;
@@ -16,5 +16,4 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    gap: 15px;
 }

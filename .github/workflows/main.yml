@@ -19,7 +19,7 @@ steps:
       with:
         node-version: ${{ matrix.node-version}}
     - name: install modules
-       run: npm install
+       run: npm i
     - name: build production
        run: npm run build-prod
     - name: build eslint

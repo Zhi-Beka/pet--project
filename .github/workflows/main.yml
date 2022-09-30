@@ -13,23 +13,23 @@ jobs:
              node-version: [17.x]
 
   steps:
-            - uses: actions/checkout@v3
-            - name: Staring Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v3
+        - uses: actions/checkout@v3
+        - name: Staring Node.js ${{ matrix.node-version }}
+        - uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
-            - name: install modules
-              run: npm install
-    - name: build production
-       run: npm run build-prod
-    - name: build eslint
-       run: npm run lint-ts
-    - name: build css lint
-       run: npm run stylelint
-    - name: build unit test
-       run: npm run unit-test
-  
-   
+        - name: install modules
+           run: npm install
+        - name: build production
+           run: npm run build-prod
+        - name: build eslint
+           run: npm run lint-ts
+        - name: build css lint
+           run: npm run stylelint
+        - name: build unit test
+           run: npm run unit-test
+      
+         
 
 
 

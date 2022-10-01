@@ -2,10 +2,6 @@
     "extends": "stylelint-config-standard-scss",
     "rules": {
         "indentation": [4],
-        "selector-class-pattern": null,
-        "comment-empty-line-before": null,
-        "declaration-block-single-line-max-declarations": null,
-        "rule-empty-line-before": null,
-        "max-line-length": null
+        "selector-class-pattern": null
     }
 }

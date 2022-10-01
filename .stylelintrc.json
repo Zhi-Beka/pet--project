@@ -6,7 +6,6 @@
         "comment-empty-line-before": null,
         "declaration-block-single-line-max-declarations": null,
         "rule-empty-line-before": null,
-        "max-line-length": null,
-        "ignoreFiles": ["build/css/*.css"]
+        "max-line-length": null
     }
 }

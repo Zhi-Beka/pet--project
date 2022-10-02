@@ -94,7 +94,6 @@
         "react-router-dom": "^6.2.1"
     },
     "loki": {
-        "diffingEngine": "gm",
         "configurations": {
             "chrome.laptop": {
                 "target": "chrome.app",

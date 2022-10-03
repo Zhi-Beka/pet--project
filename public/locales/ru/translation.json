@@ -1,8 +1,10 @@
 {
     "translate": "перевод",
     "Hello World!": "Привет мир!",
-    "Language": "Русский",
+    "Language": "ru",
     "Page not found": "Страница не найдена",
     "Something went wrong": "Что-то пошло не так",
-    "Error": "Ошибка"
+    "Error": "Ошибка",
+    "About": "О нас",
+    "Main page": "Главная страница"
 }

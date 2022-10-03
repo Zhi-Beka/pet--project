@@ -26,7 +26,7 @@ jobs:
               run: npm run lint-scss
             - name: unit testing
               run: npm run test-unit
-            - name: storybook static build
-              run: npm run storybook-build
-            - name: screenshot testing with loki
-              run: npm run test-ui-ci
+            # - name: storybook static build
+            #   run: npm run storybook-build
+            # - name: screenshot testing with loki
+            #   run: npm run test-ui-ci

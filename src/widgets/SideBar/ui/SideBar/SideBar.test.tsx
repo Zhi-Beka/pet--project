@@ -1,16 +1,16 @@
 /* eslint-disable i18next/no-literal-string */
-import { render, screen, fireEvent } from '@testing-library/react';
-import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation';
+import { screen, fireEvent } from '@testing-library/react';
+import { componentRender } from 'shared/lib/tests/renderWithRouter/componentRender';
 import { SideBar } from './SideBar';
 
 describe('testing sidebar', () => {
     test('should render sidebar', () => {
-        renderWithTranslation(<SideBar />);
+        componentRender(<SideBar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
 
-    test('should toggle classname', () => {
-        renderWithTranslation(<SideBar />);
+    test('should toggle class name', () => {
+        componentRender(<SideBar />);
         const toggleBtn = screen.getByTestId('toggleBtn');
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         fireEvent.click(toggleBtn);

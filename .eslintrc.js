@@ -3,8 +3,9 @@ module.exports = {
     extends: [
         'plugin:react/recommended',
         'airbnb',
-
+        'plugin:react-hooks/recommended',
         'plugin:i18next/recommended',
+        'prettier',
     ],
     parser: '@typescript-eslint/parser',
 
@@ -49,15 +50,18 @@ module.exports = {
         'implicit-arrow-linebreak': 'off',
         'max-len': ['error', { ignoreComments: true, code: 100 }],
         'react/jsx-wrap-multilines': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
     },
     globals: {
         __IS_DEV__: true,
     },
     overrides: [
         {
-            files: ['**/src/**/*.test.{ts,tsx}'],
+            files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
             rules: {
                 'i18next/no-literal-string': 'off',
+                'max-len': 'off',
             },
         },
     ],

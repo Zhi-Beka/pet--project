@@ -3,7 +3,6 @@
     "plugins": ["stylelint-prettier"],
     "rules": {
         "indentation": [4],
-        "selector-class-pattern": null,
-        "prettier/prettier": true
+        "selector-class-pattern": null
     }
 }

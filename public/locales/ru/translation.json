@@ -7,5 +7,7 @@
     "Error": "Ошибка",
     "About": "О нас",
     "Main page": "Главная страница",
-    "Login": "Войти"
+    "Login": "Войти",
+    "decrement": "минус",
+    "incerment": "плюс"
 }

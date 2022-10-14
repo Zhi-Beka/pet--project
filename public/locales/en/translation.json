@@ -4,5 +4,7 @@
     "Language": "en",
     "Page not found": "Page not found",
     "Something went wrong": "Something went wrong",
-    "Login": "Login"
+    "Login": "Login",
+    "decrement": "decrement",
+    "increment": "increment"
 }

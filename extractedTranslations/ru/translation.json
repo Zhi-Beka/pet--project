@@ -7,5 +7,7 @@
   "Page not found": "страница не найдена",
   "Reload": "Перезагрузка",
   "Something went wrong!": "что то рошло не так",
+  "decrement": "decrement",
+  "increment": "increment",
   "toggle": "toggle"
 }

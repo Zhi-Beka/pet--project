@@ -18,14 +18,16 @@ interface ModalProps {
     children?: ReactNode;
     isOpened?: boolean;
     onClose?: () => void;
+    lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
     // eslint-disable-next-line object-curly-newline
-    const { className, children, isOpened, onClose } = props;
+    const { className, children, isOpened, onClose, lazy } = props;
     const [isClosing, setIsClosing] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const timeRef = useRef<ReturnType<typeof setTimeout>>();
     const { theme } = useTheme();
 
@@ -57,6 +59,12 @@ export const Modal = (props: ModalProps) => {
         };
     }, [isOpened, onKeyDown]);
 
+    useEffect(() => {
+        if (isOpened) {
+            setIsMounted(true);
+        }
+    }, [isOpened]);
+
     const handleContent = (e: React.MouseEvent) => {
         e.stopPropagation();
     };
@@ -64,6 +72,10 @@ export const Modal = (props: ModalProps) => {
         [cls.opened]: isOpened,
         [cls.closed]: isClosing,
     };
+
+    if (lazy && !isMounted) {
+        return null;
+    }
     return (
         <Portal>
             <div className={classNames(cls.modal, mods, [className])}>

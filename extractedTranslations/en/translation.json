@@ -1,5 +1,6 @@
 {
   "About": "About",
+  "About us": "About us",
   "Error": "Error",
   "Language": "Language",
   "Login": "Login",
@@ -9,5 +10,9 @@
   "Something went wrong!": "Something went wrong!",
   "decrement": "",
   "increment": "",
-  "toggle": ""
+  "password": "password",
+  "toggle": "",
+  "username": "username",
+  "Главная": "Главная",
+  "Главная страница": "Главная страница"
 }

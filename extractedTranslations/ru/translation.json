@@ -1,13 +1,18 @@
 {
   "About": "About",
+  "About us": "About us",
   "Error": "Ошибка",
   "Language": "Язык",
   "Login": "Login",
-  "Main page": "Main page",
+  "Main page": "главная страница",
   "Page not found": "страница не найдена",
   "Reload": "Перезагрузка",
   "Something went wrong!": "что то рошло не так",
   "decrement": "decrement",
   "increment": "increment",
-  "toggle": "toggle"
+  "password": "password",
+  "toggle": "toggle",
+  "username": "username",
+  "Главная": "Главная",
+  "Главная страница": "Главная страница"
 }

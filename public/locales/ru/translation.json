@@ -5,9 +5,11 @@
     "Page not found": "Страница не найдена",
     "Something went wrong": "Что-то пошло не так",
     "Error": "Ошибка",
-    "About": "О нас",
+    "About us": "О нас",
     "Main page": "Главная страница",
     "Login": "Войти",
     "decrement": "минус",
-    "incerment": "плюс"
+    "incerment": "плюс",
+    "username": "введите имя",
+    "password": "пароль"
 }

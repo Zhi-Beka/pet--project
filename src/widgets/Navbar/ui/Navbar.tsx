@@ -1,11 +1,11 @@
 /* eslint-disable i18next/no-literal-string */
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Modal } from 'shared/ui/Modal/Modal';
-import { useCallback, useState } from 'react';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
-import { useTranslation } from 'react-i18next';
-import { LoginModal } from 'feautures/AuthByUserName';
-import cls from './Navbar.module.scss';
+import { classNames } from "shared/lib/classNames/classNames";
+import { Modal } from "shared/ui/Modal/Modal";
+import { useCallback, useState } from "react";
+import { Button, ThemeButton } from "shared/ui/Button/Button";
+import { useTranslation } from "react-i18next";
+import { LoginModal } from "features/AuthByUserName";
+import cls from "./Navbar.module.scss";
 
 interface NavbarProps {
     className?: string;
@@ -30,7 +30,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                 className={cls.links}
                 onClick={onShowModal}
             >
-                {t('Login')}
+                {t("Login")}
             </Button>
 
             <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />

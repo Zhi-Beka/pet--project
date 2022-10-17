@@ -1,9 +1,11 @@
-import { addDecorator } from '@storybook/react';
-import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
-import { RouteDecorator } from '../../src/shared/config/storybook/RouteDecorator/RouteDecorator';
+import { addDecorator } from "@storybook/react";
+import { StyleDecorator } from "../../src/shared/config/storybook/StyleDecorator/StyleDecorator";
+import { RouteDecorator } from "../../src/shared/config/storybook/RouteDecorator/RouteDecorator";
+import { ThemeDecorator } from "../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Theme } from "../../src/app/providers/ThemeProvider";
 
 export const parameters = {
-    actions: { argTypesRegex: '^on[A-Z].*' },
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
         matchers: {
             color: /(background|color)$/i,
@@ -14,3 +16,4 @@ export const parameters = {
 
 addDecorator(StyleDecorator);
 addDecorator(RouteDecorator);
+addDecorator(ThemeDecorator(Theme.LIGHT));

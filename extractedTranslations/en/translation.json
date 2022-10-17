@@ -1,8 +1,12 @@
 {
   "About": "About",
   "About us": "About us",
+  "Authorization form": "",
   "Error": "Error",
+  "Incorrect username or password": "Incorrect username or password",
   "Language": "Language",
+  "Log out": "",
+  "LogOut": "",
   "Login": "Login",
   "Main page": "Main page",
   "Page not found": "Page not found",
@@ -14,5 +18,6 @@
   "toggle": "",
   "username": "username",
   "Главная": "Главная",
-  "Главная страница": "Главная страница"
+  "Главная страница": "Главная страница",
+  "Не верно введен пароль или логин": ""
 }

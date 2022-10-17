@@ -11,5 +11,6 @@
     "decrement": "минус",
     "incerment": "плюс",
     "username": "введите имя",
-    "password": "пароль"
+    "password": "пароль",
+    "Authorization form": "Форма авторизации"
 }

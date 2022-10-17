@@ -1,8 +1,12 @@
 {
   "About": "About",
   "About us": "About us",
+  "Authorization form": "Форма авторизации",
   "Error": "Ошибка",
+  "Incorrect username or password": "Incorrect username or password",
   "Language": "Язык",
+  "Log out": "Log out",
+  "LogOut": "LogOut",
   "Login": "Login",
   "Main page": "главная страница",
   "Page not found": "страница не найдена",

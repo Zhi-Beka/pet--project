@@ -1,7 +1,6 @@
 /* eslint-disable i18next/no-literal-string */
 import { classNames } from "shared/lib/classNames/classNames";
-import { Modal } from "shared/ui/Modal/Modal";
-import { useCallback, useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
 import { useTranslation } from "react-i18next";
 import { LoginModal } from "features/AuthByUserName";
@@ -13,11 +12,11 @@ interface NavbarProps {
     className?: string;
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
+export const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
-    console.log(authData, "authdata");
+
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
     }, []);
@@ -60,4 +59,4 @@ export const Navbar = ({ className }: NavbarProps) => {
             )}
         </div>
     );
-};
+});

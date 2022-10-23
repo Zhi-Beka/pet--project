@@ -9,6 +9,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from "shared/lib/components/DynamicModuleLoader";
+import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppdispatch";
 import { loginByUsername } from "../../model/services/loginUsername/loginByUsername";
 import { loginActions, loginReducer } from "../../model/slices/loginSlice";
 import cls from "./LoginForm.module.scss";
@@ -19,19 +20,20 @@ import { getLoginError } from "../../model/selectors/getLoginErrorState/getLogin
 
 export interface LoginFormProps {
     className?: string;
+    onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
     loginForm: loginReducer,
 };
 
-const LoginForm = memo(({ className }: LoginFormProps) => {
+const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const username = useSelector(getLoginUserName);
     const password = useSelector(getLoginPassword);
     const isLoading = useSelector(getLoginIsLoading);
     const error = useSelector(getLoginError);
     const { t } = useTranslation();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     const onChangeUsername = useCallback(
         (value: string) => {
@@ -47,9 +49,12 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
         [dispatch]
     );
 
-    const loginOnCLick = useCallback(() => {
-        dispatch(loginByUsername({ username, password }));
-    }, [dispatch, username, password]);
+    const loginOnCLick = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }));
+        if (result.meta.requestStatus === "fulfilled") {
+            onSuccess();
+        }
+    }, [dispatch, onSuccess, username, password]);
 
     return (
         // eslint-disable-next-line i18next/no-literal-string

@@ -9,6 +9,7 @@ import {
 } from "@reduxjs/toolkit";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { CombinedState } from "redux";
+import { ProfileSchema } from "../../../../entities/Profile/model/types/profile";
 
 export interface StateSchema {
     counter: CounterSchema;
@@ -16,6 +17,7 @@ export interface StateSchema {
 
     // async reducers
     loginForm?: LoginSchema;
+    profile?: ProfileSchema;
 }
 export type StateSchemaKey = keyof StateSchema;
 

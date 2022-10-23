@@ -1,17 +1,17 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 
-import { useTheme } from 'app/providers/ThemeProvider';
+import { useTheme } from "app/providers/ThemeProvider";
 import React, {
     ReactNode,
     useCallback,
     useRef,
     useState,
     useEffect,
-} from 'react';
-import { classNames } from '../../lib/classNames/classNames';
-import { Portal } from '../Portal/Portal';
-import cls from './Modal.module.scss';
+} from "react";
+import { classNames } from "../../lib/classNames/classNames";
+import { Portal } from "../Portal/Portal";
+import cls from "./Modal.module.scss";
 
 interface ModalProps {
     className?: string;
@@ -43,7 +43,7 @@ export const Modal = (props: ModalProps) => {
 
     const onKeyDown = useCallback(
         (e: KeyboardEvent) => {
-            if (e.key === 'Escape') {
+            if (e.key === "Escape") {
                 closeHandler();
             }
         },
@@ -51,11 +51,11 @@ export const Modal = (props: ModalProps) => {
     );
     useEffect(() => {
         if (isOpened) {
-            window.addEventListener('keydown', onKeyDown);
+            window.addEventListener("keydown", onKeyDown);
         }
         return () => {
             clearTimeout(timeRef.current);
-            window.removeEventListener('keydown', onKeyDown);
+            window.removeEventListener("keydown", onKeyDown);
         };
     }, [isOpened, onKeyDown]);
 

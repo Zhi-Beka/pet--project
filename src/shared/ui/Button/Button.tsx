@@ -1,5 +1,5 @@
 /* eslint-disable object-curly-newline */
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames, Mods } from "shared/lib/classNames/classNames";
 import { ButtonHTMLAttributes, FC, memo, ReactNode } from "react";
 import cls from "./Button.module.scss";
 
@@ -21,19 +21,21 @@ export const Button = memo((props: ButtonProps) => {
     const {
         className,
         children,
-        theme,
+        theme = ThemeButton.OUTLINE,
         disabled,
 
         ...otherProps
     } = props;
 
+    const mods: Mods = {
+        [cls.disabled]: disabled,
+        [cls[theme]]: true,
+    };
+
     return (
         <button
             type='button'
-            className={classNames(cls.button, { [cls.disabled]: disabled }, [
-                className,
-                cls[theme],
-            ])}
+            className={classNames(cls.button, mods, [className])}
             {...otherProps}
             disabled={disabled}
         >

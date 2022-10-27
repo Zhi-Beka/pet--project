@@ -21,21 +21,17 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        Object.entries(reducers).forEach(
-            ([name, reducer]: ReducersListEntry) => {
-                store.reducerManager.add(name, reducer);
-                dispatch({ type: `@INIT ${name} REDUCER` });
-            }
-        );
+        Object.entries(reducers).forEach(([name, reducer]) => {
+            store.reducerManager.add(name as StateSchemaKey, reducer);
+            dispatch({ type: `@INIT ${name} REDUCER` });
+        });
 
         return () => {
             if (removeAfterUnmount) {
-                Object.entries(reducers).forEach(
-                    ([name, reducer]: ReducersListEntry) => {
-                        store.reducerManager.remove(name);
-                        dispatch({ type: `@DELETE ${name} REDUCER` });
-                    }
-                );
+                Object.entries(reducers).forEach(([name, reducer]) => {
+                    store.reducerManager.remove(name as StateSchemaKey);
+                    dispatch({ type: `@DELETE ${name} REDUCER` });
+                });
             }
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps

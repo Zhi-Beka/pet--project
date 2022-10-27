@@ -8,8 +8,9 @@ import React, {
     useRef,
     useState,
     useEffect,
+    MutableRefObject,
 } from "react";
-import { classNames } from "../../lib/classNames/classNames";
+import { classNames, Mods } from "../../lib/classNames/classNames";
 import { Portal } from "../Portal/Portal";
 import cls from "./Modal.module.scss";
 
@@ -28,7 +29,7 @@ export const Modal = (props: ModalProps) => {
     const { className, children, isOpened, onClose, lazy } = props;
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timeRef = useRef<ReturnType<typeof setTimeout>>();
+    const timeRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
     const { theme } = useTheme();
 
     const closeHandler = useCallback(() => {
@@ -68,7 +69,7 @@ export const Modal = (props: ModalProps) => {
     const handleContent = (e: React.MouseEvent) => {
         e.stopPropagation();
     };
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls.opened]: isOpened,
         [cls.closed]: isClosing,
     };

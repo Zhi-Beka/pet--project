@@ -27,10 +27,7 @@ module.exports = {
         "react/react-in-jsx-scope": "off",
         "import/no-unresolved": "off",
         "import/prefer-default-export": "off",
-        "import/no-extraneous-dependencies": [
-            "error",
-            { devDependencies: true },
-        ],
+        "import/no-extraneous-dependencies": "off",
         "import/extensions": "off",
         "no-shadow": "off",
         "react/require-default-props": "off",
@@ -53,9 +50,11 @@ module.exports = {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
         "no-param-reassign": "off",
+        "no-undef": "off",
     },
     globals: {
         __IS_DEV__: true,
+        __API__: true,
     },
     overrides: [
         {

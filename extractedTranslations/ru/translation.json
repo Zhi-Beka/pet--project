@@ -13,11 +13,17 @@
   "Profile Page": "Profile Page",
   "Reload": "Перезагрузка",
   "Something went wrong!": "что то рошло не так",
+  "Your last name": "Your last name",
+  "Your name": "Your name",
   "decrement": "decrement",
+  "edit": "edit",
   "increment": "increment",
   "password": "password",
+  "profile": "profile",
   "toggle": "toggle",
   "username": "username",
+  "Ваша фамилия": "Ваша фамилия",
+  "Ваше имя": "Ваше имя",
   "Главная": "Главная",
   "Главная страница": "Главная страница"
 }

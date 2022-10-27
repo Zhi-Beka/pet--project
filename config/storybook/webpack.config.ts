@@ -23,19 +23,19 @@ export default ({ config }: { config: webpack.Configuration }) => {
         }
         return rule;
     });
-
-    config?.plugins?.push(
-        new webpack.DefinePlugin({
-            __IS_DEV__: true,
-        })
-    );
-
     config?.module?.rules?.push({
         test: /\.svg$/,
         use: ["@svgr/webpack"],
     });
 
-    config?.module?.rules?.push(cssLoaders(true));
+    config!.module!.rules!.push(cssLoaders(true));
+
+    config!.plugins!.push(
+        new webpack.DefinePlugin({
+            __IS_DEV__: JSON.stringify(true),
+            __API__: JSON.stringify(""),
+        })
+    );
 
     return config;
 };

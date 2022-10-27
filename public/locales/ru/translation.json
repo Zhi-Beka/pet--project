@@ -12,5 +12,10 @@
     "incerment": "плюс",
     "username": "введите имя",
     "password": "пароль",
-    "Authorization form": "Форма авторизации"
+    "Authorization form": "Форма авторизации",
+    "profile": "профиль",
+    "edit": "редактировать",
+    "Your name": "Ваше имя",
+    "Your last name": "Ваша фамилия",
+    "Profile page": "Страница пользователя"
 }

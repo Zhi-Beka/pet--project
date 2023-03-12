@@ -1,0 +1,16 @@
+.ProfilePageHeader {
+    display: flex;
+    margin-bottom: 20px;
+
+    .editBtn {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .discardBtn {
+        background-color: red;
+        margin-left: auto;
+        margin-right: 10px;
+        color: white;
+    }
+}

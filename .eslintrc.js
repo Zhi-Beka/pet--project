@@ -45,7 +45,7 @@ module.exports = {
             { markupOnly: true, ignoreAttribute: ["data-testid", "to"] },
         ],
         "implicit-arrow-linebreak": "off",
-        "max-len": ["error", { ignoreComments: true, code: 120 }],
+        "max-len": ["error", { ignoreComments: true, code: 150 }],
         "react/jsx-wrap-multilines": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",

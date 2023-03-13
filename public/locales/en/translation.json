@@ -16,5 +16,10 @@
     "edit": "edit",
     "Your name": "Your name",
     "Your last name": "Your last name",
-    "Profile page": "Profile page"
+    "Profile page": "Profile page",
+    "INCORRECT_USER_DATA": "INCORRECT_USER_DATA",
+    "INCORRECT_COUNTRY": "INCORRECT_COUNTRY",
+    "INCORRECT_AGE": "INCORRECT_AGE",
+    "NO_DATA": "NO_DATA",
+    "SERVER_ERROR": "SERVER_ERROR"
 }

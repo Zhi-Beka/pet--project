@@ -8,7 +8,7 @@ type AppRoutesProps = RouteProps & {
     authOnly?: boolean;
 };
 
-export enum AppRoutes {
+export const enum AppRoutes {
     MAIN = "main",
     ABOUT = "about",
     PROFILE = "profile",

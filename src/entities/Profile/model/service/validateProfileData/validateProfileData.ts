@@ -6,19 +6,19 @@ export const validateProfileData = (profile?: Profile) => {
     }
     const { first, lastName, age, country } = profile;
 
-    const validateError: ValidateProfileError[] = [];
+    const errors: ValidateProfileError[] = [];
 
     if (!first || !lastName) {
-        validateError.push(ValidateProfileError.INCORRECT_USER_DATA);
+        errors.push(ValidateProfileError.INCORRECT_USER_DATA);
     }
 
     if (!age) {
-        validateError.push(ValidateProfileError.INCORRECT_AGE);
+        errors.push(ValidateProfileError.INCORRECT_AGE);
     }
 
     if (!country) {
-        validateError.push(ValidateProfileError.INCORRECT_COUNTRY);
+        errors.push(ValidateProfileError.INCORRECT_COUNTRY);
     }
 
-    return validateError;
+    return errors;
 };

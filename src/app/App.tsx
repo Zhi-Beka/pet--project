@@ -2,14 +2,13 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import { AppRouter } from "app/providers/router";
 import { Navbar } from "widgets/Navbar";
-import { useTheme } from "app/providers/ThemeProvider";
 import { SideBar } from "widgets/SideBar";
 import { Suspense, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { userActions } from "entities/User";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserIsLogged, userActions } from "entities/User";
 
 function App() {
-    const { theme } = useTheme();
+    const isLogged = useSelector(getUserIsLogged);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -23,7 +22,7 @@ function App() {
 
                 <div className='content-page'>
                     <SideBar />
-                    <AppRouter />
+                    {isLogged && <AppRouter />}
                 </div>
             </Suspense>
         </div>

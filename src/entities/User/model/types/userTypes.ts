@@ -5,4 +5,6 @@ export interface User {
 
 export interface UserSchema {
     AuthData?: User;
+
+    isLogged: boolean;
 }

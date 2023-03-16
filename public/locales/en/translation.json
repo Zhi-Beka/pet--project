@@ -21,5 +21,7 @@
     "INCORRECT_COUNTRY": "INCORRECT_COUNTRY",
     "INCORRECT_AGE": "INCORRECT_AGE",
     "NO_DATA": "NO_DATA",
-    "SERVER_ERROR": "SERVER_ERROR"
+    "SERVER_ERROR": "SERVER_ERROR",
+    "Article not found!": "Article not found!",
+    "Articles": "Articles"
 }

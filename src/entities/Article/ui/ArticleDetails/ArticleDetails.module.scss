@@ -1,0 +1,12 @@
+.ArticleDetails {
+    min-height: 100%;
+
+    .skeletonWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}

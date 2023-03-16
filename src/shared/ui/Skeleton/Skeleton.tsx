@@ -5,13 +5,14 @@ import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./Skeleton.module.scss";
 
 interface SkeletonProps {
+    className?: string;
     height?: string | number;
     width?: string | number;
     border?: string;
 }
 
 const Skeleton = (props: SkeletonProps) => {
-    const { height, width, border } = props;
+    const { height, width, border, className } = props;
 
     const styles: CSSProperties = {
         width,

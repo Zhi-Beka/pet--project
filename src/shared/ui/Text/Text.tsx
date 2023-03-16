@@ -2,15 +2,20 @@ import { memo } from "react";
 import { classNames, Mods } from "shared/lib/classNames/classNames";
 import cls from "./Text.module.scss";
 
-export enum themeText {
+export const enum themeText {
     PRIMARY = "primary",
     ERROR = "error",
 }
 
-export enum TextAlign {
+export const enum TextAlign {
     RIGHT = "right",
     LEFT = "left",
     CENTER = "center",
+}
+
+export const enum TextSize {
+    M = "size_m",
+    L = "size_l",
 }
 
 interface TextProps {
@@ -19,6 +24,7 @@ interface TextProps {
     text?: string;
     theme?: themeText;
     align?: TextAlign;
+    size?: TextSize;
 }
 
 export const Text = memo((props: TextProps) => {
@@ -28,11 +34,13 @@ export const Text = memo((props: TextProps) => {
         title,
         theme = themeText.PRIMARY,
         align = TextAlign.CENTER,
+        size = TextSize.M,
     } = props;
 
     const mods: Mods = {
         [cls[theme]]: true,
         [cls[align]]: true,
+        [cls[size]]: true,
     };
 
     return (

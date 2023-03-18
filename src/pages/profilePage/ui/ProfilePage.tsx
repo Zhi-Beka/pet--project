@@ -18,6 +18,8 @@ import { useSelector } from "react-redux";
 import { Currency } from "entities/Currency/models/currency";
 import { Text, themeText } from "shared/ui/Text/Text";
 import { ValidateProfileError } from "entities/Profile/model/types/profile";
+import { useInitialEffect } from "shared/lib/hooks/useInitialEffect";
+import { useParams } from "react-router-dom";
 import { Country } from "../../../entities/Country/models/types/country";
 import {
     getProfileLoading,
@@ -41,6 +43,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const isLoading = useSelector(getProfileLoading);
     const readonly = useSelector(getProfileReadOnly);
     const errors = useSelector(getProfileValidateError);
+    const { id } = useParams<{ id: string }>();
     const validateErrorTranslate = {
         [ValidateProfileError.SERVER_ERROR]: t(
             "Серверная ошибка при сохранении"
@@ -52,12 +55,11 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         ),
         [ValidateProfileError.INCORRECT_AGE]: t("Некорректный возраст"),
     };
-
-    useEffect(() => {
-        if (__PROJECT__ !== "storybook") {
-            dispatch(fetchProfileData());
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id));
         }
-    }, [dispatch]);
+    });
 
     const onChangeFirstName = useCallback(
         (value?: string) => {

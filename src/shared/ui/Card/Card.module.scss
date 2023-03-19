@@ -1,0 +1,10 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    padding: 10px;
+    p {
+        font-size: 20px !important;
+    }
+}

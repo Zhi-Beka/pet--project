@@ -19,6 +19,7 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -135,14 +136,15 @@
   "profile": [
     {
       "id": "1",
-      "first": "jibek",
+      "first": "Jibek",
       "lastname": "bek",
       "age": 465,
       "currency": "RUB",
       "country": "Russia",
       "city": "Moscow",
       "username": "admin213",
-      "avatar": "https://www.w3schools.com/howto/img_avatar2.png"
+      "avatar": "https://www.w3schools.com/howto/img_avatar2.png",
+      "lastName": "Beka"
     },
     {
       "id": "2",

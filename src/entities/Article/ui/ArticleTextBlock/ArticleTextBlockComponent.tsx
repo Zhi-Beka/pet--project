@@ -5,16 +5,17 @@ import { Text, TextAlign } from "shared/ui/Text/Text";
 import cls from "./ArticleTextBlockComponent.module.scss";
 
 interface ArticleTextBlockProps {
+    className?: string;
     block: ArticleTextBlock;
 }
 
 const ArticleTextBlockComponent = (props: ArticleTextBlockProps) => {
     const { t } = useTranslation("");
-    const { block } = props;
+    const { block, className } = props;
 
     // eslint-disable-next-line i18next/no-literal-string
     return (
-        <div className={classNames(cls.textBox, {}, [])}>
+        <div className={classNames(cls.textBox, {}, [className])}>
             {block.title && <Text title={block.title} />}
             {block.paragraphs.map((el) => {
                 return <Text key={el} text={el} align={TextAlign.LEFT} />;

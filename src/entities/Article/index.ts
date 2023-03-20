@@ -8,3 +8,5 @@ import { ArticleList } from "./ui/ArticleList/ArticleList";
 export { ArticleDetails, ArticleDetailsSchema, ViewType };
 
 export { ArticleList };
+
+export { ArticlesPageSelector } from "./ui/ArticlesPageSelector/ArticlesPageSelector";

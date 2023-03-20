@@ -7,7 +7,7 @@ import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { ArticleListItemSkeleton } from "../ArticleListItem/ArticleListItemSkeleton";
 
 interface ArticleListProps {
-    articles: any; // Article[];
+    articles: Article[];
     isLoading?: boolean;
     view?: ViewType;
 }
@@ -16,23 +16,11 @@ const getSkeletons = (view: ViewType) =>
     new Array(view === ViewType.TILE ? 9 : 3)
         .fill(0)
         .map((item, index) => (
-            <ArticleListItemSkeleton
-                className={cls.card}
-                key={view}
-                view={view}
-            />
+            <ArticleListItemSkeleton className={cls.card} view={view} />
         ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const { articles, isLoading, view = ViewType.TILE } = props;
-
-    if (isLoading) {
-        return (
-            <div className={classNames(cls.ArticleList, {}, [cls[view]])}>
-                {getSkeletons(view)}
-            </div>
-        );
-    }
 
     const renderArticle = (article: Article) => {
         return <ArticleListItem article={article} view={view} />;
@@ -41,6 +29,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     return (
         <div className={classNames(cls.ArticleList, {}, [])}>
             {articles.length > 0 ? articles.map(renderArticle) : null}
+            {isLoading && getSkeletons(view)}
         </div>
     );
 });

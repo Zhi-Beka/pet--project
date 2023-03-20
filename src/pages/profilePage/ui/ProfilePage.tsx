@@ -20,6 +20,7 @@ import { Text, themeText } from "shared/ui/Text/Text";
 import { ValidateProfileError } from "entities/Profile/model/types/profile";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect";
 import { useParams } from "react-router-dom";
+import Page from "shared/ui/Page/Page";
 import { Country } from "../../../entities/Country/models/types/country";
 import {
     getProfileLoading,
@@ -121,7 +122,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames("", {}, [className])}>
+            <Page className={classNames("", {}, [className])}>
                 <ProfilePageHeader />
                 {errors?.length &&
                     errors.map((err) => {
@@ -147,7 +148,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                     onChangeCurrency={onChangeCurrency}
                     readonly={readonly}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

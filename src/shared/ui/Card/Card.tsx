@@ -11,9 +11,12 @@ const Card = (props: CardProps) => {
     const { className, children, ...otherProps } = props;
 
     return (
-        <div className={classNames(cls.Card, {}, [className])} {...otherProps}>
+        <article
+            className={classNames(cls.Card, {}, [className])}
+            {...otherProps}
+        >
             {children}
-        </div>
+        </article>
     );
 };
 export default Card;

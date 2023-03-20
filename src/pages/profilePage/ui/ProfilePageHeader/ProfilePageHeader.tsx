@@ -37,7 +37,7 @@ const ProfilePageHeader = (props: ProfileHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [])}>
+        <header className={classNames(cls.ProfilePageHeader, {}, [])}>
             <Text title={t("Profile")} />
             {canEdit && (
                 <div className={cls.btnBox}>
@@ -70,7 +70,7 @@ const ProfilePageHeader = (props: ProfileHeaderProps) => {
                     )}
                 </div>
             )}
-        </div>
+        </header>
     );
 };
 

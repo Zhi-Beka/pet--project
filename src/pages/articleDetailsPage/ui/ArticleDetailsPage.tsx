@@ -16,13 +16,14 @@ import { useCallback } from "react";
 import { CommentForm } from "features/addCommentForm";
 import { Button } from "shared/ui/Button/Button";
 import { RoutePath } from "app/providers/router/config/routeConfig";
+import Page from "shared/ui/Page/Page";
+import { useInitialEffect } from "shared/lib/hooks/useInitialEffect";
 import cls from "./ArticleDetailsPage.module.scss";
 import {
     articleDetailsCommentReducer,
     getArticleComments,
 } from "../model/slice/ArticleDetailsCommentSlice";
-// eslint-disable-next-line import/order
-import { useInitialEffect } from "shared/lib/hooks/useInitialEffect";
+
 import { fetchCommentsByArticleId } from "../model/service/fetchCommentById";
 import { getArticleCommentsIsLoading } from "../model/selector/commentSelector";
 import { addCommentForArticle } from "../model/service/addCommentForArticle";
@@ -51,9 +52,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     if (!id) {
         return (
-            <div className={classNames("", {}, [])}>
+            <Page className={classNames("", {}, [])}>
                 {t("article not found")}
-            </div>
+            </Page>
         );
     }
 
@@ -63,13 +64,13 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames("", {}, [])}>
+            <Page className={classNames("", {}, [])}>
                 <Button onClick={backToList}>Back</Button>
                 <ArticleDetails id={id} />
                 <Text title={t("Comments")} className={cls.commentTitle} />
                 <CommentForm sendComment={sendComment} />
                 <CommentList isLoading={isLoading} comments={comments} />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

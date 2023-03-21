@@ -16,7 +16,7 @@ import { useCallback } from "react";
 import { CommentForm } from "features/addCommentForm";
 import { Button } from "shared/ui/Button/Button";
 import { RoutePath } from "app/providers/router/config/routeConfig";
-import Page from "shared/ui/Page/Page";
+import Page from "widgets/Page/Page";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect";
 import cls from "./ArticleDetailsPage.module.scss";
 import {

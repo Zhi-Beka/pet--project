@@ -1,3 +1,4 @@
+import { ScrollSchema } from "features/saveScrollPosition/model/types/ScrollSchema";
 import { LoginSchema } from "features/AuthByUserName/model/types/LoginSchema";
 import { CounterSchema } from "entities/Counter";
 import { UserSchema } from "entities/User";
@@ -20,6 +21,7 @@ import { CommentFormStateSchema } from "../../../../features/addCommentForm/mode
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
+    scroll_position: ScrollSchema;
 
     // async reducers
     loginForm?: LoginSchema;
@@ -46,7 +48,7 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 }
 export interface ThunkExtraArg {
     api: AxiosInstance;
-    navigate?: (to: To, options?: NavigateOptions) => void;
+    // navigate?: (to: To, options?: NavigateOptions) => void;
 }
 export interface ThunkConfig<T> {
     rejectValue: T;

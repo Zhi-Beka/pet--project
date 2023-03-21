@@ -13,17 +13,18 @@ interface ArticleListProps {
 }
 
 const getSkeletons = (view: ViewType) =>
-    new Array(view === ViewType.TILE ? 9 : 3)
-        .fill(0)
-        .map((item, index) => (
-            <ArticleListItemSkeleton className={cls.card} view={view} />
-        ));
+    new Array(view === ViewType.TILE ? 9 : 3).fill(0).map((item, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <ArticleListItemSkeleton key={index} className={cls.card} view={view} />
+    ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const { articles, isLoading, view = ViewType.TILE } = props;
 
     const renderArticle = (article: Article) => {
-        return <ArticleListItem article={article} view={view} />;
+        return (
+            <ArticleListItem key={article.id} article={article} view={view} />
+        );
     };
 
     return (

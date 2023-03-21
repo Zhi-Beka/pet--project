@@ -20,7 +20,7 @@ import { Text, themeText } from "shared/ui/Text/Text";
 import { ValidateProfileError } from "entities/Profile/model/types/profile";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect";
 import { useParams } from "react-router-dom";
-import Page from "shared/ui/Page/Page";
+import Page from "widgets/Page/Page";
 import { Country } from "../../../entities/Country/models/types/country";
 import {
     getProfileLoading,

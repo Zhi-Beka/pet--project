@@ -27,8 +27,9 @@ export const ArticlesPageSelector = memo((props: ArticlesPageSelectorProps) => {
     ];
 
     const onClick = (newView: ViewType) => () => {
-        onViewClick?.(newView);
-        console.log(onViewClick?.(newView), "???");
+        if (onViewClick) {
+            onViewClick(newView);
+        }
     };
 
     return (
@@ -36,6 +37,7 @@ export const ArticlesPageSelector = memo((props: ArticlesPageSelectorProps) => {
             {selectorType.map((el) => {
                 return (
                     <Button
+                        key={el.view}
                         onClick={onClick(el.view)}
                         theme={ThemeButton.CLEAR}
                         className={classNames(

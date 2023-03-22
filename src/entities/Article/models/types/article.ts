@@ -32,6 +32,7 @@ export type ArticleBlock =
     | ArticleTextBlock;
 
 export const enum ArticleType {
+    ALL = "ALL",
     IT = "IT",
     SCIENCE = "SCIENCE",
     ECONOMICS = "ECONOMICS",

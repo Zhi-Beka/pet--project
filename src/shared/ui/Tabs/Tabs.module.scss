@@ -1,0 +1,9 @@
+.Tabs {
+    display: flex;
+    gap: 10px;
+
+    .tab {
+        padding: 5px 8px;
+        cursor: pointer;
+    }
+}

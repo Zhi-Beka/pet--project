@@ -1,0 +1,13 @@
+.ArticlesPageFilters {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    font-size: var(--font-size-m);
+
+    .filtersBox {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}

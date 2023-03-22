@@ -10,3 +10,5 @@ export { ArticleDetails, ArticleDetailsSchema, ViewType };
 export { ArticleList };
 
 export { ArticlesPageSelector } from "./ui/ArticlesPageSelector/ArticlesPageSelector";
+
+export { ArticleSelectSort } from "./ui/ArticleSelectSort/ArticleSelectSort";

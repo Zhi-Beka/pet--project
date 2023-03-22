@@ -41,7 +41,7 @@ export const ArticlesPageSelector = memo((props: ArticlesPageSelectorProps) => {
                         onClick={onClick(el.view)}
                         theme={ThemeButton.CLEAR}
                         className={classNames(
-                            "",
+                            cls.btn,
                             {
                                 [cls.notSelected]: el.view !== view,
                             },

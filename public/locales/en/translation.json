@@ -20,11 +20,5 @@
     "INCORRECT_USER_DATA": "INCORRECT_USER_DATA",
     "INCORRECT_COUNTRY": "INCORRECT_COUNTRY",
     "INCORRECT_AGE": "INCORRECT_AGE",
-    "NO_DATA": "NO_DATA",
-
-    "SERVER_ERROR": "Серверная ошибка при сохранении",
-    "Article not found!": "Article not found!",
-    "Articles": "Articles",
-    "Select country": "Выберите страну",
-    "Select currency": "Укажите валюту"
+    "NO_DATA": "NO_DATA"
 }

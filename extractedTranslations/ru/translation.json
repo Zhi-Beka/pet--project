@@ -34,13 +34,21 @@
   "Your last name": "Your last name",
   "Your name": "Your name",
   "article not found": "article not found",
+  "ascending": "ascending",
+  "created at": "created at",
+  "date": "date",
   "decrement": "decrement",
+  "descending": "descending",
   "edit": "edit",
   "increment": "increment",
+  "name": "name",
   "password": "password",
   "profile": "profile",
+  "search": "search",
+  "sort by": "sort by",
   "toggle": "toggle",
   "username": "username",
+  "views": "views",
   "Ваша фамилия": "Ваша фамилия",
   "Ваше имя": "Ваше имя",
   "Главная": "Главная",
@@ -58,5 +66,10 @@
         "": ""
       }
     }
-  }
+  },
+  "возрастанию": "возрастанию",
+  "дате создания": "дате создания",
+  "названию": "названию",
+  "просмотрам": "просмотрам",
+  "убыванию": "убыванию"
 }

@@ -1,5 +1,6 @@
-import { ViewType } from "entities/Article/models/types/article";
+import { ArticleType, ViewType } from "entities/Article/models/types/article";
 import { StateSchema } from "app/providers/StoreProvider";
+import { SortField } from "pages/articlesPage";
 
 export const getArticlesPageIsLoading = (state: StateSchema) =>
     state.articles_page?.isLoading;
@@ -18,3 +19,12 @@ export const getArticlesPageHasMore = (state: StateSchema) =>
 
 export const getArticlesInit = (state: StateSchema) =>
     state.articles_page?._init;
+export const getArticlesBySort = (state: StateSchema) =>
+    state.articles_page?.sort ?? SortField.TITLE;
+export const getArticlesByOrder = (state: StateSchema) =>
+    state.articles_page?.order ?? "asc";
+export const getArticlesBySearch = (state: StateSchema) =>
+    state.articles_page?.search ?? "";
+
+export const getArticlesByType = (state: StateSchema) =>
+    state.articles_page?.type ?? ArticleType.ALL;

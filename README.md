@@ -9,5 +9,8 @@ https://golden-parfait-1322f0.netlify.app/
 * Create global themes: dark,light. Which will accessable globally (useContext)
 * FSD use
 * Json-server deployed on vercel
+* Infiniy scroll
+* url params
+* debounce,throttle
 
 

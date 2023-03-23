@@ -8,11 +8,11 @@
     }
 }
 .normal {
-    background-color: var(--primary-color);
-    color: var(--inverted-primary-color);
+    background-color: var(--card-bg);
+    // color: var(--inverted-primary-color);
 }
 
 .outlined {
     border-radius: 5px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--inverted-bg-color);
 }

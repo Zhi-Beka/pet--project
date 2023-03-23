@@ -12,6 +12,8 @@
   "Error": "Ошибка",
   "INCORRECT_USER_DATA": "INCORRECT_USER_DATA",
   "Incorrect username or password": "Incorrect username or password",
+  "Interesting parts you can see in articles and profile page": "Interesting parts you can see in articles and profile page",
+  "Interseting parts you can see in articles and profile page": "Interseting parts you can see in articles and profile page",
   "Language": "Язык",
   "Log out": "Log out",
   "LogOut": "LogOut",
@@ -27,6 +29,9 @@
   "Save": "Save",
   "Select country": "Select country",
   "Something went wrong!": "что то рошло не так",
+  "This is my pet project": {
+    " I am working on FSD design system ": " I am working on FSD design system "
+  },
   "Url for avatar": "Url for avatar",
   "Username": "Username",
   "Your age": "Your age",

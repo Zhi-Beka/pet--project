@@ -11,7 +11,9 @@ body {
 
 .app {
     min-height: 100vh;
+    max-width: 1120px;
     background: var(--bg-color);
+    margin: 0 auto;
 }
 
 .content-page {

@@ -47,7 +47,7 @@ const Page = memo((props: PageProps) => {
     });
 
     return (
-        <section
+        <main
             ref={wrapperRef}
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScrollPosition}
@@ -57,7 +57,7 @@ const Page = memo((props: PageProps) => {
             {onScrollEnd ? (
                 <div className={cls.trigger} ref={triggerRef} />
             ) : null}
-        </section>
+        </main>
     );
 });
 export default Page;

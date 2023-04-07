@@ -27,6 +27,7 @@ import {
 import { fetchCommentsByArticleId } from "../model/service/fetchCommentById";
 import { getArticleCommentsIsLoading } from "../model/selector/commentSelector";
 import { addCommentForArticle } from "../model/service/addCommentForArticle";
+import ArticleDetailsPageHeader from "./articleDetailsPageHeader/ArticleDetailsPageHeader";
 
 interface ArticleDetailsPageProps {}
 
@@ -39,12 +40,8 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const { id } = useParams<{ id: string }>();
     const comments = useSelector(getArticleComments.selectAll);
     const dispatch = useAppDispatch();
-    const navigate = useNavigate();
-    const isLoading = useSelector(getArticleCommentsIsLoading);
 
-    const backToList = useCallback(() => {
-        navigate(RoutePath.articles);
-    }, [navigate]);
+    const isLoading = useSelector(getArticleCommentsIsLoading);
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
@@ -65,7 +62,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames("", {}, [])}>
-                <Button onClick={backToList}>Back</Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text title={t("Comments")} className={cls.commentTitle} />
                 <CommentForm sendComment={sendComment} />

@@ -12,3 +12,5 @@ export { ArticleList };
 export { ArticlesPageSelector } from "./ui/ArticlesPageSelector/ArticlesPageSelector";
 
 export { ArticleSelectSort } from "./ui/ArticleSelectSort/ArticleSelectSort";
+
+export { getArticleData } from "./models/selector/getArticleById";

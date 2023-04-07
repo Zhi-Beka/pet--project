@@ -50,5 +50,8 @@
     "Currency": "Укажите валюту",
     "Hello my name is Zhibek! I am a frontend developer :)": "Привет, меня зовут Жибек! Я фронтенд разработчик :)",
     "This is my pet project. I am working on FSD design system ": "Создала этот проект для изучения  и работы с применением FSD",
-    "Interesting parts you can see in articles and profile page": "Самое интересное это на странице профиля и статьи"
+    "Interesting parts you can see in articles and profile page": "Самое интересное это на странице профиля и статьи",
+    "Back": "Назад",
+    "Create article": "Создать статью",
+    "ru": "русский"
 }

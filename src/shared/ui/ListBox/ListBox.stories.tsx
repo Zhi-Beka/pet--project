@@ -9,6 +9,13 @@ export default {
     argTypes: {
         backgroundColor: { control: "color" },
     },
+    decorators: [
+        (Story) => (
+            <div style={{ padding: "100px" }}>
+                <Story />
+            </div>
+        ),
+    ],
 } as ComponentMeta<typeof ListBox>;
 
 const items = [
@@ -19,12 +26,7 @@ const items = [
 ];
 
 const Template: ComponentStory<typeof ListBox> = (args) => (
-    <ListBox
-        onChange={(value) => console.log(value)}
-        items={items}
-        defaultValue='Выберите значение'
-        value={undefined}
-    />
+    <ListBox {...args} />
 );
 
 export const Light = Template.bind({});
@@ -38,3 +40,28 @@ Dark.args = {
     value: "text",
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const bottomLeft = Template.bind({});
+bottomLeft.args = {
+    value: "text",
+    direction: "bottom left",
+    items,
+};
+export const bottomRight = Template.bind({});
+bottomRight.args = {
+    value: "text",
+    direction: "bottom right",
+    items,
+};
+export const topRight = Template.bind({});
+topRight.args = {
+    value: "text",
+    direction: "top right",
+    items,
+};
+export const topLeft = Template.bind({});
+topLeft.args = {
+    value: "text",
+    direction: "top left",
+    items,
+};

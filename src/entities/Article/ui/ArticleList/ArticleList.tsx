@@ -1,5 +1,6 @@
+/* eslint-disable react/no-unused-prop-types */
 /* eslint-disable i18next/no-literal-string */
-import { memo } from "react";
+import { HTMLAttributeAnchorTarget, memo } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { Article, ViewType } from "../../models/types/article";
 import cls from "./ArticleList.module.scss";
@@ -7,9 +8,11 @@ import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { ArticleListItemSkeleton } from "../ArticleListItem/ArticleListItemSkeleton";
 
 interface ArticleListProps {
+    className?: string;
     articles: Article[];
     isLoading?: boolean;
     view?: ViewType;
+    target?: HTMLAttributeAnchorTarget;
 }
 
 const getSkeletons = (view: ViewType) =>
@@ -19,16 +22,30 @@ const getSkeletons = (view: ViewType) =>
     ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
-    const { articles, isLoading, view = ViewType.TILE } = props;
+    const {
+        articles,
+        isLoading,
+        view = ViewType.TILE,
+        className,
+        target,
+    } = props;
 
     const renderArticle = (article: Article) => {
         return (
-            <ArticleListItem key={article.id} article={article} view={view} />
+            <ArticleListItem
+                key={article.id}
+                article={article}
+                view={view}
+                className={cls.articleItem}
+                target={target}
+            />
         );
     };
 
     return (
-        <div className={classNames(cls.ArticleList, {}, [])}>
+        <div
+            className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+        >
             {articles.length > 0 ? articles.map(renderArticle) : null}
             {isLoading && getSkeletons(view)}
         </div>

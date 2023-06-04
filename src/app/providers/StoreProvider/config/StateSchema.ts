@@ -1,3 +1,4 @@
+import { ArticleDetailsPageSchema } from "pages/articleDetailsPage";
 import { ScrollSchema } from "features/saveScrollPosition/model/types/ScrollSchema";
 import { LoginSchema } from "features/AuthByUserName/model/types/LoginSchema";
 import { CounterSchema } from "entities/Counter";
@@ -12,9 +13,7 @@ import {
 import { CombinedState } from "redux";
 import { ProfileSchema } from "entities/Profile/model/types/profile";
 import { AxiosInstance } from "axios";
-import { NavigateOptions, To } from "react-router-dom";
 import { ArticleDetailsSchema } from "entities/Article/";
-import { ArticleDetailsCommentSchema } from "pages/articleDetailsPage";
 import { ArticlesPageStateSchema } from "../../../../pages/articlesPage/model/types/articlesPageStateSchema";
 import { CommentFormStateSchema } from "../../../../features/addCommentForm/model/types/commentFormType";
 
@@ -27,9 +26,9 @@ export interface StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     article_details?: ArticleDetailsSchema;
-    article_details_comment?: ArticleDetailsCommentSchema;
     comment_form?: CommentFormStateSchema;
     articles_page?: ArticlesPageStateSchema;
+    article_details_page?: ArticleDetailsPageSchema;
 }
 export type StateSchemaKey = keyof StateSchema;
 

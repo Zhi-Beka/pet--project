@@ -1,0 +1,11 @@
+.commentTitle {
+    margin-top: 20px;
+}
+
+.recommendations {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+}

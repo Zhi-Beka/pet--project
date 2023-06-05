@@ -57,6 +57,7 @@ module.exports = {
                     "as",
                     "top",
                     "direction",
+                    "_blank",
                 ],
             },
         ],

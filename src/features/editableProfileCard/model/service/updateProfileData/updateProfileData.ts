@@ -1,9 +1,10 @@
 /* eslint-disable no-unreachable */
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { ThunkConfig } from "app/providers/StoreProvider/config/StateSchema";
+import { Profile } from "entities/Profile";
 import { validateProfileData } from "../validateProfileData/validateProfileData";
-import { Profile, ValidateProfileError } from "../../types/profile";
 import { getProfileForm } from "../../selectors/getProfileForm/getProfileForm";
+import { ValidateProfileError } from "../../types/editableProfileCardSchema";
 
 export const updateProfileData = createAsyncThunk<
     Profile,

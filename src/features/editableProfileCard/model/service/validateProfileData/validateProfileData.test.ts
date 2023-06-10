@@ -1,7 +1,8 @@
 import { Country } from "entities/Country/models/types/country";
 import { Currency } from "entities/Currency/models/currency";
-import { ValidateProfileError } from "../../types/profile";
+
 import { validateProfileData } from "./validateProfileData";
+import { ValidateProfileError } from "../../types/editableProfileCardSchema";
 
 describe("validateProfileData.test", () => {
     const data = {

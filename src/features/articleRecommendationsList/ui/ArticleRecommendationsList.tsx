@@ -1,19 +1,10 @@
 import { Text } from "shared/ui/Text/Text";
 import { ArticleList } from "entities/Article";
-import { getArticleRecommendationIsLoading } from "pages/articleDetailsPage/model/selector/recommendationSelector";
-import { getArticleRecommendation } from "pages/articleDetailsPage/model/slice/ArticleDetailsPageRecommendationsSlice";
-import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import cls from "./ArticleRecommendationsList.module.scss";
 import { useArticleRecommendationListApi } from "../api/articleRecommendationsApi";
 
-interface ArticleRecommendationsListProps {
-    className?: string;
-}
-
-export const ArticleRecommendationsList = ({
-    className,
-}: ArticleRecommendationsListProps) => {
+export const ArticleRecommendationsList = () => {
     const { t } = useTranslation();
     const {
         data: articles,

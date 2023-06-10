@@ -1,9 +1,3 @@
-import {
-    getProfileData,
-    getProfileReadOnly,
-    profileActions,
-    updateProfileData,
-} from "entities/Profile";
 import { getUserAuthData } from "entities/User";
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
@@ -12,11 +6,15 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppdispatch";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
 import { Text } from "shared/ui/Text/Text";
-import cls from "./ProfilePageHeader.module.scss";
+import { getProfileReadOnly } from "features/editableProfileCard/model/selectors/getProfileReadOnly/getProfileReadOnly";
+import { getProfileData } from "features/editableProfileCard/model/selectors/getProfileData/getProfileData";
+import { profileActions } from "features/editableProfileCard/model/slice/ProfileSlice";
+import { updateProfileData } from "features/editableProfileCard/model/service/updateProfileData/updateProfileData";
+import cls from "./EditableProfilePageHeader.module.scss";
 
 interface ProfileHeaderProps {}
 
-const ProfilePageHeader = (props: ProfileHeaderProps) => {
+const EditableProfilePageHeader = (props: ProfileHeaderProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
     const readonly = useSelector(getProfileReadOnly);
@@ -74,4 +72,4 @@ const ProfilePageHeader = (props: ProfileHeaderProps) => {
     );
 };
 
-export default ProfilePageHeader;
+export default EditableProfilePageHeader;

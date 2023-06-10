@@ -3,9 +3,10 @@
 import { Story } from "@storybook/react";
 import { StateSchema, StoreProvider } from "app/providers/StoreProvider";
 import { articleDetailsReducer } from "entities/Article/models/slice/ArticleDetailsSlice";
-import { profileReducer } from "entities/Profile";
+
 import { commentFormReducer } from "features/addCommentForm/model/slice/commentFormSlice";
 import { loginReducer } from "features/AuthByUserName/model/slices/loginSlice";
+import { profileReducer } from "features/editableProfileCard/model/slice/ProfileSlice";
 import { articleDetailsPageReducer } from "pages/articleDetailsPage/model/slice";
 
 import { ReducersList } from "shared/lib/components/DynamicModuleLoader";
